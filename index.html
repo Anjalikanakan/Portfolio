@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charSet="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="preload" as="image" href="headshot-female.png"/>
+        <link rel="stylesheet" href="./index.css" type="text/css" data-precedence="default"/>
+        <title>Anjali Kanakan — Senior Front End Developer</title>
+        <meta name="description" content="Personal portfolio of Anjali Kanakan, a Senior Front End Developer specializing in React, Angular.js, and front-end technologies."/>
+        <!-- <link rel="modulepreload" href="index.js"/> -->
+        <style>
+            .mobile-menu { display: none; }
+            .mobile-menu.open { display: flex; }
+        </style>
+    </head>
+    <body class="min-h-screen flex flex-col bg-background text-foreground">
+        <header class="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+                <a class="text-xl font-bold tracking-tight hover:text-primary transition-colors active" href="index.html" data-status="active" aria-current="page">Anjali Kanakan</a>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors [&amp;.active]:text-foreground [&amp;.active]:font-semibold active" href="/" data-status="active" aria-current="page">About</a>
+                    <a href="resume.html" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors [&amp;.active]:text-foreground [&amp;.active]:font-semibold">Resume</a>
+                    <a href="projects.html" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors [&amp;.active]:text-foreground [&amp;.active]:font-semibold">Projects</a>
+                    <a href="contact.html" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors [&amp;.active]:text-foreground [&amp;.active]:font-semibold">Contact</a>
+                </nav>
+                <button id="menu-btn" class="md:hidden p-2 rounded-md hover:bg-accent transition-colors" aria-label="Toggle menu" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true">
+                        <path d="M4 5h16"></path>
+                        <path d="M4 12h16"></path>
+                        <path d="M4 19h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile dropdown -->
+            <div id="mobile-menu" class="mobile-menu md:hidden flex-col gap-4 p-4 pb-4 border-t border-border bg-background">
+                <a href="index.html" class="block py-2 text-sm font-semibold text-foreground" aria-current="page">About</a>
+                <a href="resume.html" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Resume</a>
+                <a href="projects.html" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Projects</a>
+                <a href="contact.html" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+            </div>
+        </header>
+        <main class="flex-1">
+            <!--$-->
+            <div class="max-w-5xl mx-auto px-4 py-16 space-y-24">
+                <section class="flex flex-col md:flex-row items-center gap-10">
+                    <div class="flex-1 space-y-6">
+                        <div class="space-y-2">
+                            <p class="text-sm font-semibold uppercase tracking-widest text-muted-foreground">Hello, I &#x27;m</p>
+                            <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight">Anjali Kanakan</h1>
+                            <div class="flex items-center gap-2 text-xl text-muted-foreground font-medium">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase" aria-hidden="true">
+                                    <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                                </svg>
+                                <span>Senior Front End Developer</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin" aria-hidden="true">
+                                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Thiruvananthapuram · On-site, Hybrid, and Remote</span>
+                        </div>
+                        <p class="text-lg leading-relaxed text-muted-foreground max-w-xl">I build fast, responsible, accessible, high performance, and scalable web applications — from pixel-perfect UIs to robust backend systems. Passionate about clean code, great developer experience, and shipping products that users love.</p>
+                        <div class="flex flex-wrap gap-3 pt-2">
+                            <a href="projects.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:opacity-90 transition-opacity">
+                                View Projects 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true">
+                                    <path d="M5 12h14"></path>
+                                    <path d="m12 5 7 7-7 7"></path>
+                                </svg>
+                            </a>
+                            <a href="resume.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-border font-medium text-sm hover:bg-accent transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download" aria-hidden="true">
+                                    <path d="M12 15V3"></path>
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <path d="m7 10 5 5 5-5"></path>
+                                </svg>
+                                Resume
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-4 pt-2">
+                            <a href="https://github.com/anjalikanakan" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-foreground transition-colors" aria-label="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github" aria-hidden="true">
+                                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/anjali-kanakan-138888116" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-foreground transition-colors" aria-label="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin" aria-hidden="true">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect width="4" height="12" x="2" y="9"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                            <a href="mailto:anjalikrishnaleela@gmail.com" class="text-muted-foreground hover:text-foreground transition-colors" aria-label="Email">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail" aria-hidden="true">
+                                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="shrink-0">
+                        <div class="relative">
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 blur-2xl scale-110"></div>
+                            <img src="headshot-female.png" alt="Anjali Kanakan" class="relative w-56 h-64 sm:w-64 sm:h-72 object-cover rounded-3xl shadow-xl border border-border"/>
+                        </div>
+                    </div>
+                </section>
+                <section class="space-y-6">
+                    <h2 class="text-3xl font-bold">About Me</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+                            <div data-slot="card-content" class="px-6 pt-6 space-y-3">
+                                <h3 class="font-semibold text-lg">Background</h3>
+                                <p class="text-muted-foreground leading-relaxed">Senior Front End Developer with 7.8 years of experience specializing in creating intuitive, user-centric interfaces. Dedicated to applying user psychology principles for seamless, engaging digital experiences.</p>
+                            </div>
+                        </div>
+                        <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+                            <div data-slot="card-content" class="px-6 pt-6 space-y-3">
+                                <h3 class="font-semibold text-lg">What I Do</h3>
+                                <p class="text-muted-foreground leading-relaxed">Building performant, accessible front-end experiences — from pixel-perfect UI to scalable application architecture using HTML, CSS, SCSS, Sass/Less, Bootstrap, Pug, and jQuery. Building scalable component architectures with React.js, Angular JS, and JavaScript managing complex application state using Redux, and integrating RESTful APIs and third-party services for dynamic, data-driven UIs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="space-y-8" id="technologies">
+                    <div>
+                        <h2 class="text-3xl font-bold">Technologies</h2>
+                        <p class="text-muted-foreground mt-2">Tools and technologies I work with on a regular basis.</p>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+                            <div data-slot="card-content" class="px-6 pt-6 space-y-4">
+                                <h3 class="font-semibold text-sm uppercase tracking-wider text-muted-foreground">Frontend</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">React</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">TypeScript</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Angular.js</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">TailwindCSS</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Redux</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">HTML5</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">CSS3</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Sass</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">SCSS/Less</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Bootstrap</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Pug</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Javascript ES6+</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">JQuery</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">React Admin</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Material UI</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Core UI</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+                            <div data-slot="card-content" class="px-6 pt-6 space-y-4">
+                                <h3 class="font-semibold text-sm uppercase tracking-wider text-muted-foreground">Backend</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Node.js</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Express</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">JSON</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">JWT</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">GraphQL</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">REST APIs</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Webpack</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Npm</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Vite</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+                            <div data-slot="card-content" class="px-6 pt-6 space-y-4">
+                                <h3 class="font-semibold text-sm uppercase tracking-wider text-muted-foreground">Database &amp;Cloud</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">PostgreSQL</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">MySQL</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Azure DevOps</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">AWS</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Docker</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Kubernetes</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+                            <div data-slot="card-content" class="px-6 pt-6 space-y-4">
+                                <h3 class="font-semibold text-sm uppercase tracking-wider text-muted-foreground">Tools &amp;Practices</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Git</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">GitHub Actions</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">CI/CD</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Jest</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Lighthouse</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Agile / Scrum</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Bitbucket</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Figma</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Adobe XD</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Photoshop</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Illustrator</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+                            <div data-slot="card-content" class="px-6 pt-6 space-y-4">
+                                <h3 class="font-semibold text-sm uppercase tracking-wider text-muted-foreground">CMS &amp;Standards</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Drupal</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Wordpress</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">WCAG Accessibility</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">SEO</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Cross-browser Compatibility</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm">
+                            <div data-slot="card-content" class="px-6 pt-6 space-y-4">
+                                <h3 class="font-semibold text-sm uppercase tracking-wider text-muted-foreground">AI Tools</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Claude Code</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Github Copilot</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Antigravity</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">ChatGPT</span>
+                                    <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90 text-sm px-3 py-1">Google Gemini</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="text-center py-12 rounded-2xl border border-border bg-muted/30 space-y-4">
+                    <h2 class="text-3xl font-bold">Let &#x27;s Work Together</h2>
+                    <p class="text-muted-foreground max-w-md mx-auto">Open to new opportunities, collaborations, and interesting projects. Feel free to reach out.</p>
+                    <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">
+                        Get in Touch 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </section>
+            </div>
+            <script>
+                (function(t) {
+                    let s;
+                    try {
+                        s = JSON.parse(sessionStorage.getItem(t.storageKey) || "{}")
+                    } catch (e) {
+                        console.error(e);
+                        return
+                    }
+                    const c = t.key || window.history.state?.__TSR_key
+                      , r = c ? s[c] : void 0;
+                    if (t.shouldScrollRestoration && r && typeof r == "object" && Object.keys(r).length > 0) {
+                        for (const e in r) {
+                            const o = r[e];
+                            if (!o || typeof o != "object")
+                                continue;
+                            const l = o.scrollX
+                              , i = o.scrollY;
+                            if (!(!Number.isFinite(l) || !Number.isFinite(i))) {
+                                if (e === "window")
+                                    window.scrollTo({
+                                        top: i,
+                                        left: l,
+                                        behavior: t.behavior
+                                    });
+                                else if (e) {
+                                    let n;
+                                    try {
+                                        n = document.querySelector(e)
+                                    } catch {
+                                        continue
+                                    }
+                                    n && (n.scrollLeft = l,
+                                    n.scrollTop = i)
+                                }
+                            }
+                        }
+                        return
+                    }
+                    const a = window.location.hash.split("#", 2)[1];
+                    if (a) {
+                        const e = window.history.state?.__hashScrollIntoViewOptions ?? !0;
+                        if (e) {
+                            const o = document.getElementById(a);
+                            o && o.scrollIntoView(e)
+                        }
+                        return
+                    }
+                    window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: t.behavior
+                    })
+                }
+                )({
+                    "storageKey": "tsr-scroll-restoration-v1_3",
+                    "shouldScrollRestoration": true
+                });
+                document.currentScript.remove()
+            </script>
+            <!--/$-->
+        </main>
+        <footer class="border-t border-border mt-20">
+            <div class="max-w-5xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-muted-foreground">© 
+                <!-- -->
+                2026
+                <!-- -->
+                Anjali Kanakan. All rights reserved.</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com/anjalikanakan" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-muted-foreground hover:text-foreground transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github" aria-hidden="true">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/anjali-kanakan-138888116" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-muted-foreground hover:text-foreground transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin" aria-hidden="true">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect width="4" height="12" x="2" y="9"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="mailto:anjalikrishnaleela@gmail.com" aria-label="Email" class="text-muted-foreground hover:text-foreground transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail" aria-hidden="true">
+                            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script class="$tsr" id="$tsr-stream-barrier">
+            (self.$R = self.$R || {})["tsr"] = [];
+            self.$_TSR = {
+                h() {
+                    this.hydrated = !0,
+                    this.c()
+                },
+                e() {
+                    this.streamEnded = !0,
+                    this.c()
+                },
+                c() {
+                    this.hydrated && this.streamEnded && (delete self.$_TSR,
+                    delete self.$R.tsr)
+                },
+                p(e) {
+                    this.initialized ? e() : this.buffer.push(e)
+                },
+                buffer: []
+            };
+            $_TSR.router = ($R => $R[0] = {
+                manifest: $R[1] = {
+                    routes: $R[2] = {
+                        __root__: $R[3] = {
+                            preloads: $R[4] = ["/assets/index-C8ZC0vcE.js"],
+                            assets: $R[5] = [$R[6] = {
+                                tag: "link",
+                                attrs: $R[7] = {
+                                    rel: "stylesheet",
+                                    href: "/assets/index-DJZ94J5K.css",
+                                    type: "text/css"
+                                }
+                            }, $R[8] = {
+                                tag: "script",
+                                attrs: $R[9] = {
+                                    type: "module",
+                                    async: !0
+                                },
+                                children: "import(\"/assets/index-C8ZC0vcE.js\")"
+                            }]
+                        }
+                    }
+                },
+                matches: $R[10] = [$R[11] = {
+                    i: "__root__ ",
+                    u: 1780029519746,
+                    s: "success",
+                    ssr: !0
+                }, $R[12] = {
+                    i: "  ",
+                    u: 1780029519746,
+                    s: "success",
+                    ssr: !0
+                }],
+                lastMatchId: "  "
+            })($R["tsr"]);
+            $_TSR.e();
+            document.currentScript.remove()
+        </script>
+        <script type="module" async="">
+            import("/assets/index-C8ZC0vcE.js")
+        </script>
+        <script>
+            const menuBtn    = document.getElementById("menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            menuBtn.addEventListener("click", () => {
+                const open = mobileMenu.classList.toggle("open");
+                menuBtn.setAttribute("aria-expanded", open);
+            });
+        </script>
+    </body>
+</html>

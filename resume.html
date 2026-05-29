@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preload" as="image" href="headshot-female.png" />
+  <link rel="stylesheet" href="./index.css" type="text/css" />
+  <title>Resume — Anjali Kanakan</title>
+  <meta name="description" content="Resume of Anjali Kanakan, Senior Front End Developer — experience, education, and skills." />
+  <style>
+    /* Resume-specific styles not covered by index.css utilities */
+    .card {
+      background-color: var(--card);
+      color: var(--card-foreground);
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) + 4px); /* rounded-xl */
+      box-shadow: 0 1px 3px #0000001a;
+    }
+    .card-header { padding: 1.5rem 1.5rem 0; }
+    .card-body   { padding: 1rem 1.5rem 1.5rem; }
+
+    .timeline { position: relative; padding-left: 1.5rem; border-left: 2px solid var(--border); }
+    .timeline-dot {
+      position: absolute;
+      left: calc(-1.5rem - 1px);
+      top: .35rem;
+      width: .75rem;
+      height: .75rem;
+      border-radius: 9999px;
+      background-color: var(--primary);
+      border: 2px solid var(--background);
+    }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: .25rem;
+      padding: .25rem .625rem;
+      border-radius: 9999px;
+      font-size: .75rem; font-weight: 500;
+      white-space: nowrap; align-self: flex-start;
+    }
+    .badge-secondary { background-color: var(--secondary); color: var(--secondary-foreground); }
+    .badge-outline   { background: transparent; border: 1px solid var(--border); color: var(--foreground); }
+
+    .job-meta { display: flex; flex-direction: column; gap: .5rem; }
+    @media (min-width: 40rem) {
+      .job-meta { flex-direction: row; justify-content: space-between; align-items: flex-start; }
+    }
+
+    .prose ul { list-style: disc; padding-left: 1.25rem; }
+    .prose li { margin-bottom: .25rem; font-size: .875rem; color: var(--muted-foreground); }
+
+    .headshot {
+      width: 10rem; height: 12rem;
+      border-radius: 1rem;
+      object-fit: cover;
+      box-shadow: 0 4px 6px #0000001a;
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .profile-row { display: flex; flex-direction: column; gap: 2rem; }
+    @media (min-width: 48rem) {
+      .profile-row { flex-direction: row; align-items: flex-start; }
+    }
+
+    /* Mobile nav drawer */
+    .mobile-menu { display: none; }
+    .mobile-menu.open { display: flex; }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col bg-background text-foreground">
+
+  <!-- ── HEADER (same as index.html, Resume link marked active) ── -->
+  <header class="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a class="text-xl font-bold tracking-tight hover:text-primary transition-colors" href="index.html">Anjali Kanakan</a>
+
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">About</a>
+        <a href="resume.html" class="text-sm font-semibold text-foreground transition-colors" aria-current="page">Resume</a>
+        <a href="projects.html" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Projects</a>
+        <a href="contact.html" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+      </nav>
+
+      <button id="menu-btn" class="md:hidden p-2 rounded-md hover:bg-accent transition-colors" aria-label="Toggle menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div id="mobile-menu" class="mobile-menu md:hidden flex-col gap-4 p-4 pb-4 border-t border-border bg-background">
+      <a href="index.html" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">About</a>
+      <a href="resume.html" class="block py-2 text-sm font-semibold text-foreground" aria-current="page">Resume</a>
+      <a href="projects.html" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Projects</a>
+      <a href="contact.html" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+    </div>
+  </header>
+
+  <!-- ── MAIN ── -->
+  <main class="flex-1">
+    <div id="resume-root" class="max-w-5xl mx-auto px-4 py-16 space-y-16"></div>
+  </main>
+
+  <!-- ── FOOTER (same as index.html) ── -->
+  <footer class="border-t border-border mt-20">
+    <div class="max-w-5xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-muted-foreground">© <span id="footer-year"></span> Anjali Kanakan. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/anjalikanakan" target="_blank" rel="noopener noreferrer"
+           aria-label="GitHub" class="text-muted-foreground hover:text-foreground transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+            <path d="M9 18c-4.51 2-5-2-7-2"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/anjali-kanakan-138888116" target="_blank" rel="noopener noreferrer"
+           aria-label="LinkedIn" class="text-muted-foreground hover:text-foreground transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <a href="mailto:anjalikrishnaleela@gmail.com" aria-label="Email"
+           class="text-muted-foreground hover:text-foreground transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("footer-year").textContent = new Date().getFullYear();
+
+    /* ── Mobile menu toggle ─────────────────────────────────────── */
+    const menuBtn  = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+      const open = mobileMenu.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", open);
+    });
+
+    /* ── DATA ───────────────────────────────────────────────────── */
+    /* Edit these objects to update the page content.               */
+
+    const PROFILE = {
+      name:     "Anjali Kanakan",
+      title:    "Senior Front End Developer",
+      bio:      "Senior Front End Developer with 7.8 years of experience specializing in creating intuitive, user-centric interfaces. Expert in front-end technologies including React.js, Angular.js, JavaScript, HTML, CSS, Sass, Bootstrap, and jQuery. Skilled in UI/UX design using Adobe Photoshop, Illustrator, and Figma, and proficient in CMS front-end development with Drupal.",
+      headshot: "headshot-female.png",
+    };
+
+    const EXPERIENCE = [
+      {
+        jobTitle:  "Senior Front End Developer",
+        company:   "Appstation Pvt Ltd",
+        location:  "Trivandrum",
+        startDate: "2024-06",
+        endDate:   null,
+        summary:   "Lead front-end development for scalable, multilingual web applications with a focus on performance, accessibility, and responsive design.",
+        tags:      ["React", "Redux", "Node.js", "MySQL", "Azure DevOps", "HTML/CSS", "Javascript ES6+"],
+        bullets: [
+          "Developed scalable and reusable UI components using React.js, Redux, Bootstrap, Pug, JavaScript ES6+, HTML5, CSS3, and Tailwind CSS.",
+          "Built high-performance multilingual web applications supporting English and Arabic layouts.",
+          "Integrated REST APIs and implemented dynamic front-end functionalities using React.js and jQuery.",
+          "Engineered scalable front-end architectures using Pug, SASS (mixins/functions), and component-based design approaches.",
+          "Implemented interactive animations and transitions using GSAP and CSS animations.",
+          "Ensured WCAG accessibility compliance and optimized application performance using Lighthouse.",
+          "Developed responsive Chatbot UI interfaces and mobile-friendly web applications.",
+          "Contributed to Drupal CMS front-end development including custom theming and template customization.",
+          "Collaborated with backend and UI/UX teams in Agile/Scrum environments for feature development and deployment.",
+          "Managed version control and deployment workflows using Git, Azure DevOps, Jira, and CI/CD pipelines.",
+        ],
+      },
+      {
+        jobTitle:  "UI Developer",
+        company:   "Links 4 Engineering Pvt. Ltd",
+        location:  "Remote",
+        startDate: "2021-09",
+        endDate:   "2024-05",
+        summary:   "Developed rich UI components and translated business requirements into polished, responsive user interfaces.",
+        tags:      ["React", "Redux", "REST Api", "React Admin", "Material UI", "Core UI", "Tailwind CSS"],
+        bullets: [
+          "Developed rich UI components using React.js, React Admin, Material UI, Core UI, HTML5, CSS3, Bootstrap, JavaScript ES6+, and jQuery.",
+          "Translated business requirements into polished and responsive user interfaces.",
+          "Designed UI screens, wireframes, and interactive prototypes using Adobe XD.",
+          "Converted wireframes and mockups into functional web applications.",
+          "Optimized websites for speed, scalability, accessibility, and brand consistency.",
+        ],
+      },
+      {
+        jobTitle:  "UI Developer",
+        company:   "Aatoon Solutions Pvt. Ltd",
+        location:  "Kochi",
+        startDate: "2019-06",
+        endDate:   "2021-09",
+        summary:   "Coordinated with UX/UI teams to deliver cross-browser compatible web applications and integrated REST APIs.",
+        tags:      ["JavaScript", "Angular js", "HTML5", "CSS3", "SASS", "WordPress", "Bootstrap", "REST Api"],
+        bullets: [
+          "Coordinated with UX/UI teams to deliver cross-browser compatible web applications.",
+          "Integrated REST APIs using Angular.js and Ajax.",
+          "Built functional web applications using JavaScript ES6+, HTML, and CSS.",
+        ],
+      },
+      {
+        jobTitle:  "Web Designer",
+        company:   "Wahy Lab Solutions",
+        location:  "Kochi",
+        startDate: "2018-08",
+        endDate:   "2019-05",
+        summary:   "Developed end-to-end responsive websites and designed company logos and SEO-friendly interactive interfaces.",
+        tags:      ["HTML", "CSS", "SCSS/LESS", "Bootstrap", "Javascript", "JQuery", "Photoshop", "Illustrator"],
+        bullets: [
+          "Developed end-to-end responsive websites using Bootstrap.",
+          "Debugged and resolved front-end issues to enhance usability.",
+          "Designed company logos and SEO-friendly interactive interfaces.",
+        ],
+      },
+    ];
+
+    const EDUCATION = [
+      {
+        school:    "Government Engineering College, Bartonhill, Trivandrum",
+        degree:    "BTech Information Technology",
+        startDate: "2014-08",
+        endDate:   "2018-05",
+        extra:     [" "],
+      },
+    ];
+
+    /* ── Helpers ────────────────────────────────────────────────── */
+    const MONTHS = ["January","February","March","April","May","June",
+                    "July","August","September","October","November","December"];
+
+    function formatDate(str) {
+      if (!str) return "Present";
+      const [year, month] = str.split("-");
+      return (!year || !month) ? str : `${MONTHS[parseInt(month, 10) - 1]} ${year}`;
+    }
+
+    function el(tag, cls, ...children) {
+      const node = document.createElement(tag);
+      if (cls) node.className = cls;
+      for (const child of children.flat()) {
+        if (child == null) continue;
+        node.append(typeof child === "string" ? document.createTextNode(child) : child);
+      }
+      return node;
+    }
+
+    function attr(node, attrs) {
+      for (const [k, v] of Object.entries(attrs)) node.setAttribute(k, v);
+      return node;
+    }
+
+    function svgIcon(paths, size = 24) {
+      const ns  = "http://www.w3.org/2000/svg";
+      const svg = document.createElementNS(ns, "svg");
+      attr(svg, { width: size, height: size, viewBox: "0 0 24 24",
+                  fill: "none", stroke: "currentColor",
+                  "stroke-width": "2", "stroke-linecap": "round", "stroke-linejoin": "round" });
+      for (const d of [].concat(paths)) {
+        const p = document.createElementNS(ns, "path");
+        p.setAttribute("d", d);
+        svg.appendChild(p);
+      }
+      return svg;
+    }
+
+    /* ── Icons ──────────────────────────────────────────────────── */
+    const ICON = {
+      briefcase: ["M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16",
+                  "M2 9h20M2 9a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"],
+      cap:       ["M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z",
+                  "M22 10v6", "M6 12.5V16a6 3 0 0 0 12 0v-3.5"],
+      pin:       ["M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z",
+                  "M12 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"],
+      calendar:  ["M8 2v4","M16 2v4","M3 10h18",
+                  "M21 8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"],
+    };
+
+    /* ── Render helpers ─────────────────────────────────────────── */
+    function badge(text, variant = "secondary") {
+      const b = el("span", `badge badge-${variant}`);
+      b.append(svgIcon(ICON.calendar, 12), ` ${text}`);
+      return b;
+    }
+
+    function renderProfile() {
+      const row = el("div", "profile-row");
+
+      const text = el("div", "flex-1 space-y-3",
+        el("h2", "text-2xl font-bold", PROFILE.name),
+        el("p",  "font-medium text-muted-foreground", PROFILE.title),
+        el("p",  "leading-relaxed text-muted-foreground", PROFILE.bio),
+      );
+
+      const img = attr(document.createElement("img"), {
+        src: PROFILE.headshot,
+        alt: `${PROFILE.name} — Professional headshot`,
+        class: "headshot",
+      });
+
+      row.append(text, img);
+      return el("div", "card", el("div", "card-body", row));
+    }
+
+    function renderJob(job) {
+      const dateRange = `${formatDate(job.startDate)} – ${formatDate(job.endDate)}`;
+
+      const meta = el("div", "job-meta",
+        el("div", "space-y-1",
+          el("p", "text-xl font-semibold", job.jobTitle),
+          el("p", "font-medium text-muted-foreground", job.company),
+          (() => {
+            const loc = el("div", "flex items-center gap-1 text-sm text-muted-foreground");
+            loc.append(svgIcon(ICON.pin, 13), el("span", null, job.location));
+            return loc;
+          })(),
+        ),
+        badge(dateRange),
+      );
+
+      const bullets = el("ul", null, ...job.bullets.map(b => el("li", null, b)));
+      const prose   = el("div", "prose", bullets);
+
+      const tags = el("div", "flex flex-wrap gap-2 pt-2",
+        ...job.tags.map(t => el("span", "badge badge-outline", t))
+      );
+
+      const card = el("div", "card",
+        el("div", "card-header", meta),
+        el("div", "card-body space-y-4",
+          el("p", "leading-relaxed text-muted-foreground", job.summary),
+          prose,
+          tags,
+        ),
+      );
+
+      const dot  = el("div", "timeline-dot");
+      const item = el("div", "relative", dot, card);
+      return item;
+    }
+
+    function renderEdu(edu) {
+      const dateRange = `${formatDate(edu.startDate)} – ${formatDate(edu.endDate)}`;
+      const meta = el("div", "job-meta",
+        el("div", "space-y-1",
+          el("p", "text-xl font-semibold", edu.school),
+          el("p", "font-medium text-muted-foreground", edu.degree),
+          edu.extra?.length
+            ? el("p", "text-sm text-muted-foreground", edu.extra.join(" · "))
+            : null,
+        ),
+        badge(dateRange),
+      );
+      return el("div", "card", el("div", "card-header pb-6 mb-8", meta));
+    }
+
+    /* ── Main render ────────────────────────────────────────────── */
+    function render() {
+      const root = document.getElementById("resume-root");
+
+      const sortedExp = [...EXPERIENCE].sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
+      const sortedEdu = [...EDUCATION].sort((a, b)  => new Date(b.startDate) - new Date(a.startDate));
+
+      /* Hero */
+      const dlBtn = attr(el("a", "inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-border font-medium text-sm hover:bg-accent transition-colors shrink-0"),
+        { href: "Anjali_Kanakan_Senior_Front_End_Developer_CV.docx", download: "Anjali_Kanakan_Senior_Front_End_Developer_CV.docx" });
+      const dlIcon = (() => {
+        const ns = "http://www.w3.org/2000/svg";
+        const svg = document.createElementNS(ns, "svg");
+        for (const [k,v] of Object.entries({ width:"16", height:"16", viewBox:"0 0 24 24", fill:"none", stroke:"currentColor", "stroke-width":"2", "stroke-linecap":"round", "stroke-linejoin":"round" })) svg.setAttribute(k,v);
+        ["M12 15V3", "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4", "m7 10 5 5 5-5"].forEach(d => { const p = document.createElementNS(ns,"path"); p.setAttribute("d",d); svg.appendChild(p); });
+        return svg;
+      })();
+      dlBtn.append(dlIcon, "Download CV");
+
+      const hero = el("div", "space-y-4",
+        el("div", "flex flex-wrap items-start justify-between gap-4",
+          el("div", "space-y-1",
+            el("h1", "text-5xl font-extrabold tracking-tight", "Resume"),
+            el("p",  "text-lg text-muted-foreground", "My professional experience, education, and skill set."),
+          ),
+          dlBtn,
+        ),
+        el("hr", "border-t border-border mt-6"),
+      );
+
+      /* Work experience */
+      const heading = cls => {
+        const wrap = el("div", "flex items-center gap-3");
+        return (icon, text) => { wrap.append(icon, el("h2", cls, text)); return wrap; };
+      };
+
+      const timeline = el("div", "timeline space-y-8", ...sortedExp.map(renderJob));
+      const expSection = el("section", "space-y-6",
+        heading("text-3xl font-bold")(svgIcon(ICON.briefcase, 24), "Work Experience"),
+        timeline,
+      );
+
+      const eduSection = el("section", "space-y-6",
+        heading("text-3xl font-bold")(svgIcon(ICON.cap, 24), "Education"),
+        el("div", "space-y-6", ...sortedEdu.map(renderEdu)),
+      );
+
+      root.append(hero, renderProfile(), expSection, eduSection);
+    }
+
+    render();
+  </script>
+</body>
+</html>
