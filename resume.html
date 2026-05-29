@@ -74,13 +74,13 @@
   <!-- ── HEADER (same as index.html, Resume link marked active) ── -->
   <header class="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
     <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a class="text-xl font-bold tracking-tight hover:text-primary transition-colors" href="index.html">Anjali Kanakan</a>
+      <a class="text-xl font-bold tracking-tight hover:text-primary transition-colors" href="/">Anjali Kanakan</a>
 
       <nav class="hidden md:flex items-center gap-6">
-        <a href="index.html" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">About</a>
-        <a href="resume.html" class="text-sm font-semibold text-foreground transition-colors" aria-current="page">Resume</a>
-        <a href="projects.html" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Projects</a>
-        <a href="contact.html" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+        <a href="/" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">About</a>
+        <a href="resume" class="text-sm font-semibold text-foreground transition-colors" aria-current="page">Resume</a>
+        <a href="projects" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Projects</a>
+        <a href="contact" class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</a>
       </nav>
 
       <button id="menu-btn" class="md:hidden p-2 rounded-md hover:bg-accent transition-colors" aria-label="Toggle menu" aria-expanded="false">
@@ -93,10 +93,10 @@
 
     <!-- Mobile dropdown -->
     <div id="mobile-menu" class="mobile-menu md:hidden flex-col gap-4 p-4 pb-4 border-t border-border bg-background">
-      <a href="index.html" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">About</a>
-      <a href="resume.html" class="block py-2 text-sm font-semibold text-foreground" aria-current="page">Resume</a>
-      <a href="projects.html" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Projects</a>
-      <a href="contact.html" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+      <a href="/" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">About</a>
+      <a href="resume" class="block py-2 text-sm font-semibold text-foreground" aria-current="page">Resume</a>
+      <a href="projects" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Projects</a>
+      <a href="contact" class="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact</a>
     </div>
   </header>
 
@@ -375,7 +375,7 @@
 
       /* Hero */
       const dlBtn = attr(el("a", "inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-border font-medium text-sm hover:bg-accent transition-colors shrink-0"),
-        { href: "Anjali_Kanakan_Senior_Front_End_Developer_CV.docx", download: "Anjali_Kanakan_Senior_Front_End_Developer_CV.docx" });
+        { href: "Anjali_Kanakan_Senior_Front_End_Developer_CV.pdf", download: "Anjali_Kanakan_Senior_Front_End_Developer_CV.pdf" });
       const dlIcon = (() => {
         const ns = "http://www.w3.org/2000/svg";
         const svg = document.createElementNS(ns, "svg");
